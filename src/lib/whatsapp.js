@@ -110,7 +110,7 @@ Please provide the following details:
 We will get back to you shortly! 🎉`;
 }
 
-export function builddreamtinMessage(product) {
+export const builddreamtinMessage = (product) => {
   return `🌟 *Sri Elite Cake House — dreamtin cakeOrder*
 
 *Selected Product:* ${product}
