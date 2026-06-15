@@ -41,7 +41,7 @@ export const PRODUCTS = {
     priceValue: 400,
     unit: '500g / 1kg',
     image: '/products/cakes/vanilla.jpg',
-    available: false
+    available: true
   },
   {
     name: 'Vanilla Cake (Premium)',
