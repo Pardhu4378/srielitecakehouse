@@ -12,7 +12,7 @@ const heroImages = [
   '/assets/products/cakes/birthday_chocolate.png',
   '/assets/products/cakes/anniversary_redvelvet.png',
   '/assets/products/cakes/wedding_drip.png',
-  '/assets/products/cakes/babyshower_pink.jpeg',
+  '/assets/products/cakes/babyshower_pink.jpg',
   '/assets/products/cakes/corporate_office.png',
 ];
 export default function Hero() {
