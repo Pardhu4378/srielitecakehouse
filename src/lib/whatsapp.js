@@ -166,7 +166,7 @@ export function getMessageBuilder(category) {
     muffins: buildMuffinMessage,
     cupcakes: buildCupcakeMessage,
     brownies: buildBrownieMessage,
-    kunafa: builddreamtinMessage,
+    dreamtin: builddreamtinMessage,
   };
   return builders[category] || buildGeneralMessage;
 }
