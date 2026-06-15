@@ -110,8 +110,8 @@ Please provide the following details:
 We will get back to you shortly! 🎉`;
 }
 
-export function buildKunafaMessage(product) {
-  return `🌟 *Sri Elite Cake House — Kunafa Chocolate Order*
+export function builddreamtinMessage(product) {
+  return `🌟 *Sri Elite Cake House — dreamtin cakeOrder*
 
 *Selected Product:* ${product}
 
@@ -166,7 +166,7 @@ export function getMessageBuilder(category) {
     muffins: buildMuffinMessage,
     cupcakes: buildCupcakeMessage,
     brownies: buildBrownieMessage,
-    kunafa: buildKunafaMessage,
+    kunafa: builddreamtinMessage,
   };
   return builders[category] || buildGeneralMessage;
 }
