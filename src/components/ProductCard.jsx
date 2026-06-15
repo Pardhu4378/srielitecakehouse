@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { openWhatsApp, buildCakeMessage, buildBentoMessage, buildDonutMessage, buildMuffinMessage, buildCupcakeMessage, buildBrownieMessage, buildKunafaMessage } from '../lib/whatsapp';
+import { openWhatsApp, buildCakeMessage, buildBentoMessage, buildDonutMessage, buildMuffinMessage, buildCupcakeMessage, buildBrownieMessage, builddreamtinMessage } from '../lib/whatsapp';
 import { ShoppingBag, Tag, AlertCircle } from 'lucide-react';
 
 function getMessageFn(category, product, occasion) {
