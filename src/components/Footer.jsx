@@ -62,7 +62,7 @@ export default function Footer() {
 
     <iframe
         title="Sri Elite Cake House"
-        src="https://share.google/8sc2YdFwB9RaZZlpk"
+        src="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.30852967689!2d77.64919527454538!3d12.887871816709463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae150767093ec3%3A0xec480cbdda757b17!2sSri%20Elite%20Cake%20House!5e0!3m2!1sen!2sin!4v1781605479453!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
         className="w-full h-[350px] rounded-xl border border-[#C8944A]/30"
         loading="lazy"
         allowFullScreen
