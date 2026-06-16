@@ -16,6 +16,9 @@ export default function CategoryPage() {
 
   const categoryMeta = CATEGORIES.find(c => c.slug === slug);
   const categoryProducts = products[slug] || [];
+  console.log("Slug =", slug);
+console.log("Products =", products);
+console.log("products[slug] =", products[slug]);
 
   const getStartingPrice = () => {
     const validItems = categoryProducts.filter(item => item.available !== false && item.priceValue > 0);
@@ -25,7 +28,7 @@ export default function CategoryPage() {
     }
     const fallbackPrices = {
       cakes: '₹500/KG', bento: '₹299/box', donuts: '₹50/piece',
-      muffins: '₹45/piece', cupcakes: '₹40/piece', brownies: '₹60/piece', kunafa: '₹25 onwards'
+      muffins: '₹45/piece', cupcakes: '₹40/piece', brownies: '₹60/piece', dreamtin: '₹250 onwards'
     };
     return fallbackPrices[slug] || 'Price on Request';
   };

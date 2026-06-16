@@ -85,7 +85,7 @@ export default function Dashboard() {
               </div>
               <h3 className="font-playfair font-bold text-[#3E1F00] text-lg mb-2">Manage Products</h3>
               <p className="text-[#8B5E3C] text-xs leading-relaxed">
-                Add new celebration cakes, brownies, donuts, kunafa, or bento cakes. Edit prices, descriptions, and change availability.
+                Add new celebration cakes, brownies, donuts, dreamtin, or bento cakes. Edit prices, descriptions, and change availability.
               </p>
             </div>
             <Link 

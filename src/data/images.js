@@ -11,7 +11,7 @@
 //     muffins/      → chocolate.jpg, vanilla.jpg, blueberry.jpg
 //     cupcakes/     → chocolate.jpg, redvelvet.jpg, vanilla.jpg
 //     brownies/     → fudge.jpg, walnut.jpg, oreo.jpg
-//     kunafa/       → pistachio.jpg, chocolate.jpg, giftbox.jpg
+//     dreamtin/       → pistachio.jpg, chocolate.jpg, giftbox.jpg
 //   gallery/        → gallery_1.jpg, gallery_2.jpg, ...
 
 export const IMAGES = {
@@ -62,10 +62,10 @@ export const IMAGES = {
     oreo:   '/products/brownies/oreo.jpg',
   },
 
-  kunafa: {
-    pistachio: '/products/kunafa/pistachio.jpg',
-    chocolate: '/products/kunafa/chocolate.jpg',
-    giftbox:   '/products/kunafa/giftbox.jpg',
+  dreamtin: {
+    pistachio: '/products/dreamtin/dreamtin.jpg',
+    chocolate: '/products/dreamtin/dreamtin.jpg',
+    giftbox:   '/products/dreamtin/dreamtin.jpg',
   },
 
   // Category card cover images — uses first product image of each category
@@ -75,6 +75,6 @@ export const IMAGES = {
     muffins:  '/products/muffins/chocolate.jpg',
     cupcakes: '/products/cupcakes/chocolate.jpg',
     brownies: '/products/brownies/fudge.jpg',
-    kunafa:   '/products/kunafa/pistachio.jpg',
+    dreamtin:   '/products/dreamtin/dreamtin.jpg',
   },
 };

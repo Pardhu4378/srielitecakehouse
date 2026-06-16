@@ -77,7 +77,7 @@ export function ProductProvider({ children }) {
   // Helper to group list of products by category slug
   const groupProducts = (list) => {
     const grouped = {
-      cakes: [], bento: [], donuts: [], muffins: [], cupcakes: [], brownies: [], kunafa: []
+      cakes: [], bento: [], donuts: [], muffins: [], cupcakes: [], brownies: [], dreamtin: []
     };
     
     list.forEach(item => {

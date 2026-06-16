@@ -809,7 +809,7 @@ dreamtin: [
 export const REVIEWS = [
   { id: 1, name: 'Priya Sharma',    rating: 5, review: 'Absolutely amazing! The birthday cake was a masterpiece. Everyone loved it and couldn\'t stop complimenting!', date: 'May 2026', avatar: 'PS' },
   { id: 2, name: 'Rahul Nair',      rating: 5, review: 'Ordered a wedding cake and it exceeded all expectations. Beautifully crafted and absolutely delicious!', date: 'April 2026', avatar: 'RN' },
-  { id: 3, name: 'Anitha Kumar',    rating: 5, review: 'The kunafa chocolates were simply heavenly. Perfect for gifting. I will definitely order again!', date: 'April 2026', avatar: 'AK' },
+  { id: 3, name: 'Anitha Kumar',    rating: 5, review: 'The dreamtin cakes were simply heavenly. Perfect for gifting. I will definitely order again!', date: 'April 2026', avatar: 'AK' },
   { id: 4, name: 'Mohammed Farhan', rating: 5, review: 'Best custom cake in the city! They captured every single detail of our theme perfectly. Highly recommend!', date: 'March 2026', avatar: 'MF' },
   { id: 5, name: 'Deepa Menon',     rating: 4, review: 'Delicious brownies and muffins. Super fresh, perfectly soft and baked just right every single time.', date: 'March 2026', avatar: 'DM' },
   { id: 6, name: 'Sathish Reddy',   rating: 5, review: 'Sri Elite Cake House is our go-to for all family celebrations. Quality and taste never disappoints!', date: 'February 2026', avatar: 'SR' },
