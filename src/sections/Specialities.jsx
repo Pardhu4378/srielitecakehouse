@@ -8,12 +8,13 @@ export default function Specialities() {
   const [activeModal, setActiveModal] = useState(null);
   const navigate = useNavigate();
   const { products } = useProductsContext();
-
-  const handleCategoryClick = (slug) => {
-    if (slug === 'cakes') navigate('/cakes');
-    else navigate(`/category/${slug}`);
-  };
-
+const handleCategoryClick = (id) => {
+  if (id === "cakes") {
+    navigate("/cakes");
+  } else {
+    navigate(`/category/${id}`);
+  }
+};
   const categoryImages = {
     cakes:    '/products/cakes/birthday_chocolate.png',
     bento:    '/products/cakes/birthday_vanilla.png',
@@ -76,7 +77,7 @@ export default function Specialities() {
         {CATEGORIES.map((cat) => (
           <div
             key={cat.id}
-            onClick={() => handleCategoryClick(cat.slug)}
+            onClick={() => handleCategoryClick(cat.id)}
             className="group cursor-pointer"
           >
             <div className="product-card overflow-hidden">
@@ -107,14 +108,14 @@ export default function Specialities() {
                 </p>
 
                 <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    navigate(`/${cat.slug}`);
-                  }}
-                  className="bg-[#C8944A] hover:bg-[#B07F35] text-white text-xs px-4 py-2 rounded-full transition-all"
-                >
-                  View Prices
-                </button>
+  onClick={(e) => {
+    e.stopPropagation();
+    handleCategoryClick(cat.id);
+  }}
+  className="bg-[#C8944A] hover:bg-[#B07F35] text-white text-xs px-4 py-2 rounded-full transition-all"
+>
+  View Prices
+</button>
               </div>
 
             </div>
