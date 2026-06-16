@@ -24,10 +24,9 @@ export default function Footer() {
       <div className="bg-[#FFFDF9] h-8 rounded-b-[50px]" />
 
       <div className="px-6 md:px-16 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Brand */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-4">
             <div className="flex items-center gap-4 mb-4">
               <img src="/logo.png" alt="Sri Elite Cake House" className="h-20 w-20 object-contain rounded-full border-2 border-[#C8944A]" />
               <div>
@@ -56,30 +55,24 @@ export default function Footer() {
               </a>
             </div>
           </div>
-{/* Google Map */}
-<div>
-  <h3 className="font-playfair font-bold text-white text-lg mb-5 pb-2 border-b border-[#C8944A]/30">
-    Our Outlet
-  </h3>
+<div className="lg:col-span-5">
+    <h3 className="font-playfair font-bold text-white text-lg mb-5 pb-2 border-b border-[#C8944A]/30">
+        Our Outlet
+    </h3>
 
-  <div className="rounded-xl overflow-hidden border border-[#C8944A]/30 shadow-lg">
     <iframe
-      title="Sri Elite Cake House Location"
-      src="Phttps://share.google/8sc2YdFwB9RaZZlpk"
-      width="100%"
-      height="220"
-      style={{ border: 0 }}
-      loading="lazy"
-      allowFullScreen
-      referrerPolicy="no-referrer-when-downgrade"
-    />
-  </div>
+        title="Sri Elite Cake House"
+        src="YOUR_EMBED_LINK"
+        className="w-full h-[350px] rounded-xl border border-[#C8944A]/30"
+        loading="lazy"
+        allowFullScreen
+    ></iframe>
 
-  <p className="mt-4 text-[#C8944A] text-sm leading-6">
-    <strong>Kruthika Nilaya Apartment</strong><br />
-    1st Main Road, Kudlu Main Rd,<br />
-    Bengaluru, Karnataka 560068
-  </p>
+    <p className="mt-4 text-[#C8944A] text-sm leading-7">
+        <strong>Kruthika Nilaya Apartment</strong><br/>
+        1st Main Road, Kudlu Main Rd,<br/>
+        Bengaluru, Karnataka 560068
+    </p>
 </div>
           {/* Quick Links */}
           <div>
@@ -156,7 +149,7 @@ export default function Footer() {
   </p>
 
   <a
-  href="https://wa.me/918885474059"
+  href="https://wa.me/8885474059"
   target="_blank"
   rel="noreferrer"
   className="text-[#C8944A] text-sm font-semibold mt-1 inline-block hover:underline"
