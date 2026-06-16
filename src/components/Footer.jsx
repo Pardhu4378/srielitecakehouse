@@ -132,7 +132,7 @@ export default function Footer() {
   </p>
 
   <a
-  href="https://wa.me/917795064442"
+  href="https://wa.me/918885474059"
   target="_blank"
   rel="noreferrer"
   className="text-[#C8944A] text-sm font-semibold mt-1 inline-block hover:underline"
