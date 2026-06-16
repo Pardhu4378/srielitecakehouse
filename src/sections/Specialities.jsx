@@ -8,11 +8,13 @@ export default function Specialities() {
   const [activeModal, setActiveModal] = useState(null);
   const navigate = useNavigate();
   const { products } = useProductsContext();
-const handleCategoryClick = (id) => {
-  if (id === "cakes") {
+const handleCategoryClick = (slug) => {
+  console.log("Clicked:", slug);
+
+  if (slug === "cakes") {
     navigate("/cakes");
   } else {
-    navigate(`/category/${id}`);
+    navigate(`/category/${slug}`);
   }
 };
   const categoryImages = {
@@ -77,7 +79,7 @@ const handleCategoryClick = (id) => {
         {CATEGORIES.map((cat) => (
           <div
             key={cat.id}
-            onClick={() => handleCategoryClick(cat.id)}
+            onClick={() => handleCategoryClick(cat.slug)}
             className="group cursor-pointer"
           >
             <div className="product-card overflow-hidden">
@@ -110,9 +112,12 @@ const handleCategoryClick = (id) => {
                 <button
   onClick={(e) => {
     e.stopPropagation();
-    handleCategoryClick(cat.id);
+
+    console.log(cat.id);
+    console.log(`/category/${cat.id}`);
+
+    navigate(`/category/${cat.id}`);
   }}
-  className="bg-[#C8944A] hover:bg-[#B07F35] text-white text-xs px-4 py-2 rounded-full transition-all"
 >
   View Prices
 </button>
