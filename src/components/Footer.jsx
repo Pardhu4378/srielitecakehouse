@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Phone, InstagramIcon } from "lucide-react";
+import { Phone } from "lucide-react";
+import { FaInstagram } from "react-icons/fa";
 import { PHONE_NUMBER, WHATSAPP_NUMBER, INSTAGRAM_URL, FACEBOOK_URL } from '../data/siteData';
 
 const quickLinks = [
@@ -105,8 +106,7 @@ export default function Footer() {
   className="flex items-start gap-3 group"
 >
   <div className="w-8 h-8 rounded-full bg-pink-500/20 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-pink-500 transition-colors">
-    <InstagramIcon
-      size={14}
+   <FaInstagram size={20}
       className="text-pink-500 group-hover:text-white"
     />
   </div>
