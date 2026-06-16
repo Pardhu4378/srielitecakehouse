@@ -175,7 +175,7 @@ export const PRODUCTS = {
   },
 
   {
-    name: 'Black Forest Cake',
+    name: 'Black Forest Cake(premix basic)',
     description: 'Black Forest cake',
     price: '₹500 / ₹900',
     priceValue: 500,
@@ -193,7 +193,7 @@ export const PRODUCTS = {
     available: true
   },
   {
-    name: 'Black Forest Cake (Eggless)',
+    name: 'Black Forest Cake (Eggless premium)',
     description: 'Black Forest cake',
     price: '₹650 / ₹1200',
     priceValue: 650,
@@ -203,7 +203,7 @@ export const PRODUCTS = {
   },
 
   {
-    name: 'White Forest Cake',
+    name: 'White Forest Cake(premix basic)',
     description: 'White Forest cake',
     price: '₹500 / ₹900',
     priceValue: 500,
@@ -221,7 +221,7 @@ export const PRODUCTS = {
     available: true
   },
   {
-    name: 'White Forest Cake (Eggless)',
+    name: 'White Forest Cake (Eggless Premium)',
     description: 'White Forest cake',
     price: '₹650 / ₹1200',
     priceValue: 650,
@@ -231,7 +231,7 @@ export const PRODUCTS = {
   },
 
   {
-    name: 'Butterscotch Cake',
+    name: 'Butterscotch Cake(premix basic)',
     description: 'Butterscotch cake',
     price: '₹500 / ₹900',
     priceValue: 500,
@@ -249,7 +249,7 @@ export const PRODUCTS = {
     available: true
   },
   {
-    name: 'Butterscotch Cake (Eggless)',
+    name: 'Butterscotch Cake (Eggless Premium)',
     description: 'Butterscotch cake',
     price: '₹650 / ₹1200',
     priceValue: 650,
