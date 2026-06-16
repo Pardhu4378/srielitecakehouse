@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
 import { collection, getDocs, query, orderBy, where } from 'firebase/firestore';
 import { db } from '../lib/firebase';
-import { REVIEWS } from '../data/siteData';
 
 export default function useReviews(onlyApproved = true) {
-  const [reviews, setReviews] = useState(REVIEWS);
+  const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -14,11 +13,11 @@ export default function useReviews(onlyApproved = true) {
       const isPlaceholder = db.app.options.apiKey === "YOUR_API_KEY" || !db.app.options.apiKey;
       
       if (isPlaceholder) {
-        setReviews(REVIEWS);
-        setError(null);
-        setLoading(false);
-        return;
-      }
+    setReviews([]);
+    setError(null);
+    setLoading(false);
+    return;
+}
 
       let q = query(collection(db, 'reviews'), orderBy('createdAt', 'desc'));
       if (onlyApproved) {
@@ -28,7 +27,7 @@ export default function useReviews(onlyApproved = true) {
       const querySnapshot = await getDocs(q);
       
       if (querySnapshot.empty) {
-        setReviews(REVIEWS);
+    setReviews([]);
       } else {
         const list = [];
         querySnapshot.forEach((doc) => {
@@ -39,7 +38,7 @@ export default function useReviews(onlyApproved = true) {
       setError(null);
     } catch (err) {
       console.warn("Firestore reviews fetch failed, using local seed data:", err);
-      setReviews(REVIEWS);
+      setReviews([]);
       setError(err.message);
     } finally {
       setLoading(false);
