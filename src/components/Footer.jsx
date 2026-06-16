@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone } from 'lucide-react';
+import { Phone, Instagram} from 'lucide-react';
 import { PHONE_NUMBER, WHATSAPP_NUMBER, INSTAGRAM_URL, FACEBOOK_URL } from '../data/siteData';
 
 const quickLinks = [
@@ -99,24 +99,25 @@ export default function Footer() {
     </a>
 
     <a
-      href={INSTAGRAM_URL}
-      target="_blank"
-      rel="noreferrer"
-      className="flex items-start gap-3 group"
-    >
-      <div className="w-8 h-8 rounded-full bg-pink-500/20 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-pink-500 transition-colors">
-        <svg viewBox="0 0 24 24" width="14" height="14" fill="#e6683c">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07..." />
-        </svg>
-      </div>
+  href={INSTAGRAM_URL}
+  target="_blank"
+  rel="noreferrer"
+  className="flex items-start gap-3 group"
+>
+  <div className="w-8 h-8 rounded-full bg-pink-500/20 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-pink-500 transition-colors">
+    <Instagram
+      size={14}
+      className="text-pink-500 group-hover:text-white"
+    />
+  </div>
 
-      <div>
-        <p className="text-[#F5E6CC]/60 text-xs">Instagram</p>
-        <p className="text-[#C8944A] text-sm font-bold">
-          @srielitecakehouse
-        </p>
-      </div>
-    </a>
+  <div>
+    <p className="text-[#F5E6CC]/60 text-xs">Instagram</p>
+    <p className="text-[#C8944A] text-sm font-bold">
+      @srielitecakehouse
+    </p>
+  </div>
+</a>
 
   </div>
 </div>
