@@ -65,7 +65,7 @@ export default function Footer() {
   <div className="rounded-xl overflow-hidden border border-[#C8944A]/30 shadow-lg">
     <iframe
       title="Sri Elite Cake House Location"
-      src="PASTE_YOUR_GOOGLE_MAP_EMBED_LINK_HERE"
+      src="Phttps://share.google/8sc2YdFwB9RaZZlpk"
       width="100%"
       height="220"
       style={{ border: 0 }}
