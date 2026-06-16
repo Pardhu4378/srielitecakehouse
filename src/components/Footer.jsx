@@ -62,7 +62,7 @@ export default function Footer() {
 
     <iframe
         title="Sri Elite Cake House"
-        src="YOUR_EMBED_LINK"
+        src="https://share.google/8sc2YdFwB9RaZZlpk"
         className="w-full h-[350px] rounded-xl border border-[#C8944A]/30"
         loading="lazy"
         allowFullScreen
