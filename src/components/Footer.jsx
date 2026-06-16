@@ -26,7 +26,7 @@ export default function Footer() {
       <div className="px-6 md:px-16 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-10 gap-12">
           {/* Brand */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-4">
             <div className="flex items-center gap-4 mb-4">
               <img src="/logo.png" alt="Sri Elite Cake House" className="h-20 w-20 object-contain rounded-full border-2 border-[#C8944A]" />
               <div>
@@ -124,7 +124,7 @@ export default function Footer() {
           </div>
 
   {/* Outlet Info */}
-<div className="lg:col-span-3">
+<div className="lg:col-span-5">
     <h3 className="font-playfair font-bold text-white text-lg mb-5 pb-2 border-b border-[#C8944A]/30">
         Our Outlet
     </h3>
@@ -144,7 +144,7 @@ export default function Footer() {
     </p>
 </div>
           {/* Quick Links */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-3">
             <h3 className="font-playfair font-bold text-white text-lg mb-5 pb-2 border-b border-[#C8944A]/30">Quick Links</h3>
             <ul className="space-y-2.5">
               {quickLinks.map(link => (
