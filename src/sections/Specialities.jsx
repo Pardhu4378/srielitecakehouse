@@ -110,10 +110,7 @@ const handleCategoryClick = (slug) => {
                 </p>
 
                 <button
-  onClick={(e) => {
-    e.stopPropagation();
-    handleCategoryClick(cat.slug);
-  }}
+  onClick={() => handleCategoryClick(cat.slug)}
   className="bg-[#C8944A] hover:bg-[#B07F35] text-white text-xs px-4 py-2 rounded-full transition-all"
 >
   View Prices
