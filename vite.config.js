@@ -11,3 +11,4 @@ export default defineConfig({
   // So assets/logo.png → accessible at /logo.png in the browser
   publicDir: 'assets',
 })
+  
