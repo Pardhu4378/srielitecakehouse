@@ -110,9 +110,11 @@ const handleCategoryClick = (slug) => {
                 </p>
 
                 <button
-  className="bg-[#C8944A] hover:bg-[#B07F35] text-white text-xs px-4 py-2 rounded-full transition-all"
+  type="button"
+  disabled
+  className="bg-[#C8944A] text-white text-xs px-4 py-2 rounded-full opacity-90 cursor-default"
 >
-  View Prices
+  View Items
 </button>
               </div>
 
