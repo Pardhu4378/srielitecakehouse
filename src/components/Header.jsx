@@ -112,6 +112,7 @@ export default function Header() {
           <Link to="/" className="flex items-center gap-3 shrink-0">
             <img src="/logo.png" alt="Sri Elite Cake House" className="h-14 w-14 object-contain" />
             <div className="hidden sm:block">
+              <p className="font-playfair text-[#C8944A] text-sm tracking-widest lowercase">Welcome to</p>
               <p className="font-playfair font-bold text-[#3E1F00] text-lg leading-tight">Sri Elite</p>
               <p className="font-playfair text-[#C8944A] text-sm tracking-widest uppercase">Cake House</p>
             </div>
