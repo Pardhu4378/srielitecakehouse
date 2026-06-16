@@ -124,7 +124,7 @@ export default function Footer() {
           </div>
 
   {/* Outlet Info */}
-<div className="lg:col-span-5">
+<div className="lg:col-span-4">
     <h3 className="font-playfair font-bold text-white text-lg mb-5 pb-2 border-b border-[#C8944A]/30">
         Our Outlet
     </h3>
