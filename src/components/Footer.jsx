@@ -96,6 +96,15 @@ export default function Footer() {
     <h3 className="font-playfair font-bold text-white text-lg mb-5 pb-2 border-b border-[#C8944A]/30">
         Our Outlet
     </h3>
+    <iframe
+  title="Sri Elite Cake House"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.30852967689!2d77.64919527454538!3d12.887871816709463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae150767093ec3%3A0xec480cbdda757b17!2sSri%20Elite%20Cake%20House!5e0!3m2!1sen!2sin!4v1781605479453!5m2!1sen!2sin"
+  className="w-full h-[400px] rounded-xl"
+  style={{ border: 0 }}
+  loading="lazy"
+  allowFullScreen
+  referrerPolicy="no-referrer-when-downgrade"
+/>
     <p className="mt-4 text-[#C8944A] text-sm leading-7">
         <strong>Kruthika Nilaya Apartment</strong><br/>
         1st Main Road, Kudlu Main Rd,<br/>
