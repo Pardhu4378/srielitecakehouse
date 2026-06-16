@@ -19,45 +19,32 @@ export default function ReviewsAdmin() {
     }
   }, [reviews]);
 
-  const handleApprove = async (review) => {
-    setActionLoading(true);
-    try {
-      if (isDemo) {
-        setLocalReviews(localReviews.map(r => r.id === review.id ? { ...r, approved: true } : r));
-        alert('Demo success: Review approved (Local Session Only)');
-      } else {
-        const docRef = doc(db, 'reviews', review.id);
-        await updateDoc(docRef, { approved: true, updatedAt: new Date().toISOString() });
-        await refetch();
-      }
-    } catch (err) {
-      console.error(err);
-      alert('Error approving review: ' + err.message);
-    } finally {
-      setActionLoading(false);
-    }
-  };
-
   const handleDelete = async (review) => {
-    if (!window.confirm(`Are you sure you want to delete the review by ${review.name}?`)) return;
+  console.log("========== DELETE ==========");
+  console.log("Review:", review);
+  console.log("Review ID:", review.id);
+  console.log("Type:", typeof review.id);
 
-    setActionLoading(true);
-    try {
-      if (isDemo) {
-        setLocalReviews(localReviews.filter(r => r.id !== review.id));
-        alert('Demo success: Review deleted (Local Session Only)');
-      } else {
-        await deleteDoc(doc(db, 'reviews', review.id));
-        await refetch();
-      }
-    } catch (err) {
-      console.error(err);
-      alert('Error deleting review: ' + err.message);
-    } finally {
-      setActionLoading(false);
-    }
-  };
+  if (!window.confirm(`Delete review by ${review.name}?`)) return;
 
+  setActionLoading(true);
+
+  try {
+    const reviewRef = doc(db, "reviews", String(review.id));
+    console.log("Document Ref:", reviewRef);
+
+    await deleteDoc(reviewRef);
+
+    alert("Deleted Successfully");
+
+    await refetch();
+  } catch (err) {
+    console.error("DELETE ERROR:", err);
+    alert(err.message);
+  } finally {
+    setActionLoading(false);
+  }
+};
   // Split into pending and approved lists
   const pendingReviews = localReviews.filter(r => !r.approved);
   const approvedReviews = localReviews.filter(r => r.approved);
