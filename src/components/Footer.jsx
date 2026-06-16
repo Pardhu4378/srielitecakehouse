@@ -24,7 +24,7 @@ export default function Footer() {
       <div className="bg-[#FFFDF9] h-8 rounded-b-[50px]" />
 
       <div className="px-6 md:px-16 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-10 gap-12">
           {/* Brand */}
           <div className="lg:col-span-4">
             <div className="flex items-center gap-4 mb-4">
@@ -34,7 +34,7 @@ export default function Footer() {
                 <p className="font-playfair text-[#C8944A] text-lg tracking-widest uppercase">Cake House</p>
               </div>
             </div>
-            <p className="text-[#C8944A]/80 text-sm leading-relaxed max-w-xs mb-6">
+            <p className="text-[#C8944A]/80 text-sm leading-relaxed mb-6">
               Crafting moments of joy with freshly baked, premium homemade cakes and desserts for every special occasion.
             </p>
             <div className="flex items-center gap-3">
@@ -130,7 +130,7 @@ export default function Footer() {
     <iframe
   title="Sri Elite Cake House"
   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.30852967689!2d77.64919527454538!3d12.887871816709463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae150767093ec3%3A0xec480cbdda757b17!2sSri%20Elite%20Cake%20House!5e0!3m2!1sen!2sin!4v1781605479453!5m2!1sen!2sin"
-  className="w-full h-[400px] rounded-xl"
+  className="w-full h-[360px] rounded-xl shadow-2xl border-2 border-[#C8944A]/30"
   style={{ border: 0 }}
   loading="lazy"
   allowFullScreen
@@ -143,7 +143,7 @@ export default function Footer() {
     </p>
 </div>
           {/* Quick Links */}
-          <div>
+          <div className="lg:col-span-2">
             <h3 className="font-playfair font-bold text-white text-lg mb-5 pb-2 border-b border-[#C8944A]/30">Quick Links</h3>
             <ul className="space-y-2.5">
               {quickLinks.map(link => (
@@ -183,7 +183,7 @@ export default function Footer() {
   </p>
 
   <a
-  href="https://wa.me/8885474059"
+  href="https://wa.me/918885474059"
   target="_blank"
   rel="noreferrer"
   className="text-[#C8944A] text-sm font-semibold mt-1 inline-block hover:underline"
