@@ -78,10 +78,10 @@ const handleCategoryClick = (slug) => {
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
         {CATEGORIES.map((cat) => (
           <div
-            key={cat.id}
-            onClick={() => handleCategoryClick(cat.slug)}
-            className="group cursor-pointer"
-          >
+  key={cat.id}
+  onClick={() => handleCategoryClick(cat.slug)}
+  className="group cursor-pointer"
+>
             <div className="product-card overflow-hidden">
 
               {/* Image */}
@@ -112,12 +112,9 @@ const handleCategoryClick = (slug) => {
                 <button
   onClick={(e) => {
     e.stopPropagation();
-
-    console.log(cat.id);
-    console.log(`/category/${cat.id}`);
-
-    navigate(`/category/${cat.id}`);
+    handleCategoryClick(cat.slug);
   }}
+  className="bg-[#C8944A] hover:bg-[#B07F35] text-white text-xs px-4 py-2 rounded-full transition-all"
 >
   View Prices
 </button>
