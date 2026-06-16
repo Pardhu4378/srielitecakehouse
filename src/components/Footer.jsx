@@ -24,7 +24,7 @@ export default function Footer() {
       <div className="bg-[#FFFDF9] h-8 rounded-b-[50px]" />
 
       <div className="px-6 md:px-16 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-4">
             <div className="flex items-center gap-4 mb-4">
