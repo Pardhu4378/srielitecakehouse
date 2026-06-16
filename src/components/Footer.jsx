@@ -55,36 +55,6 @@ export default function Footer() {
               </a>
             </div>
           </div>
-<div className="lg:col-span-5">
-    <h3 className="font-playfair font-bold text-white text-lg mb-5 pb-2 border-b border-[#C8944A]/30">
-        Our Outlet
-    </h3>
-    <p className="mt-4 text-[#C8944A] text-sm leading-7">
-        <strong>Kruthika Nilaya Apartment</strong><br/>
-        1st Main Road, Kudlu Main Rd,<br/>
-        Bengaluru, Karnataka 560068
-    </p>
-</div>
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-playfair font-bold text-white text-lg mb-5 pb-2 border-b border-[#C8944A]/30">Quick Links</h3>
-            <ul className="space-y-2.5">
-              {quickLinks.map(link => (
-                <li key={link.href}>
-                  {link.href.startsWith('/#') ? (
-                    <button onClick={() => scrollTo(link.href)}
-                      className="text-[#C8944A]/80 hover:text-[#C8944A] text-sm transition-colors flex items-center gap-2">
-                      <span className="text-[#C8944A]">›</span> {link.label}
-                    </button>
-                  ) : (
-                    <Link to={link.href} className="text-[#C8944A]/80 hover:text-[#C8944A] text-sm transition-colors flex items-center gap-2">
-                      <span className="text-[#C8944A]">›</span> {link.label}
-                    </Link>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
 
           {/* Contact */}
           <div>
@@ -121,6 +91,39 @@ export default function Footer() {
               </a>
             </div>
           </div>
+  {/* Outlet Info */}
+<div className="lg:col-span-5">
+    <h3 className="font-playfair font-bold text-white text-lg mb-5 pb-2 border-b border-[#C8944A]/30">
+        Our Outlet
+    </h3>
+    <p className="mt-4 text-[#C8944A] text-sm leading-7">
+        <strong>Kruthika Nilaya Apartment</strong><br/>
+        1st Main Road, Kudlu Main Rd,<br/>
+        Bengaluru, Karnataka 560068
+    </p>
+</div>
+          {/* Quick Links */}
+          <div>
+            <h3 className="font-playfair font-bold text-white text-lg mb-5 pb-2 border-b border-[#C8944A]/30">Quick Links</h3>
+            <ul className="space-y-2.5">
+              {quickLinks.map(link => (
+                <li key={link.href}>
+                  {link.href.startsWith('/#') ? (
+                    <button onClick={() => scrollTo(link.href)}
+                      className="text-[#C8944A]/80 hover:text-[#C8944A] text-sm transition-colors flex items-center gap-2">
+                      <span className="text-[#C8944A]">›</span> {link.label}
+                    </button>
+                  ) : (
+                    <Link to={link.href} className="text-[#C8944A]/80 hover:text-[#C8944A] text-sm transition-colors flex items-center gap-2">
+                      <span className="text-[#C8944A]">›</span> {link.label}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          
         </div>
       </div>
 
