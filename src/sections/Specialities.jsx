@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { CATEGORIES } from '../data/siteData';
 import PriceListModal from '../components/PriceListModal';
 import { useProductsContext } from '../context/ProductContext';
+import {useNavigate} from "react-router-dom";
 
 export default function Specialities() {
   const [activeModal, setActiveModal] = useState(null);
@@ -109,7 +110,7 @@ export default function Specialities() {
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
-                    setActiveModal(cat.id);
+                    navigate(`/${cat.slug}`);
                   }}
                   className="bg-[#C8944A] hover:bg-[#B07F35] text-white text-xs px-4 py-2 rounded-full transition-all"
                 >
