@@ -56,21 +56,30 @@ export default function Footer() {
               </a>
             </div>
           </div>
+{/* Google Map */}
+<div>
+  <h3 className="font-playfair font-bold text-white text-lg mb-5 pb-2 border-b border-[#C8944A]/30">
+    Our Outlet
+  </h3>
 
-          {/* Outlet Address */}
-<div className="flex items-start gap-3">
-  <div className="w-8 h-8 rounded-full bg-[#C8944A]/20 flex items-center justify-center shrink-0 mt-0.5">
-    <span className="text-[#C8944A] text-sm">📍</span>
+  <div className="rounded-xl overflow-hidden border border-[#C8944A]/30 shadow-lg">
+    <iframe
+      title="Sri Elite Cake House Location"
+      src="PASTE_YOUR_GOOGLE_MAP_EMBED_LINK_HERE"
+      width="100%"
+      height="220"
+      style={{ border: 0 }}
+      loading="lazy"
+      allowFullScreen
+      referrerPolicy="no-referrer-when-downgrade"
+    />
   </div>
 
-  <div>
-    <p className="text-[#F5E6CC]/60 text-xs">Our Outlet</p>
-    <p className="text-[#C8944A] text-sm font-bold leading-6">
-      Kruthika Nilaya Apartment,<br />
-      1st Main Road, Kudlu Main Rd,<br />
-      Bengaluru, Karnataka 560068
-    </p>
-  </div>
+  <p className="mt-4 text-[#C8944A] text-sm leading-6">
+    <strong>Kruthika Nilaya Apartment</strong><br />
+    1st Main Road, Kudlu Main Rd,<br />
+    Bengaluru, Karnataka 560068
+  </p>
 </div>
           {/* Quick Links */}
           <div>
