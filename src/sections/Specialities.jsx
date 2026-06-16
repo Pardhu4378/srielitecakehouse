@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { CATEGORIES } from '../data/siteData';
 import PriceListModal from '../components/PriceListModal';
 import { useProductsContext } from '../context/ProductContext';
-import {useNavigate} from "react-router-dom";
 
 export default function Specialities() {
   const [activeModal, setActiveModal] = useState(null);
