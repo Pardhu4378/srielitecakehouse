@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { CATEGORIES } from '../data/siteData';
 import PriceListModal from '../components/PriceListModal';
 import { useProductsContext } from '../context/ProductContext';
@@ -109,13 +109,13 @@ const handleCategoryClick = (slug) => {
                   {startingPrices[cat.id]}
                 </p>
 
-                <button
-  type="button"
-  disabled
-  className="bg-[#C8944A] text-white text-xs px-4 py-2 rounded-full opacity-90 cursor-default"
+                <Link
+  to={cat.slug === "cakes" ? "/cakes" : `/category/${cat.slug}`}
+  className="inline-block bg-[#C8944A] hover:bg-[#B07F35] text-white text-xs px-4 py-2 rounded-full transition-all"
+  onClick={(e) => e.stopPropagation()}
 >
   View Items
-</button>
+</Link>
               </div>
 
             </div>
