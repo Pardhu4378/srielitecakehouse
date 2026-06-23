@@ -126,49 +126,97 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-6">
-            {NAV_LINKS.map(link => (
-              <button key={link.href} onClick={() => handleNavClick(link.href)}
-                className="nav-link text-sm font-bold uppercase tracking-wider text-[#3E1F00] hover:text-[#C8944A] transition-colors">
-                {link.label}
-              </button>
-            ))}
-          </nav>
-
+          {/* Desktop Navigation */}
+<nav
+  className="hidden lg:block"
+  aria-label="Primary Navigation"
+>
+  <ul className="flex items-center gap-6 list-none m-0 p-0">
+    {NAV_LINKS.map((link) => (
+      <li key={link.href}>
+        <Link
+          to={link.href}
+          onClick={(e) => {
+            e.preventDefault();
+            handleNavClick(link.href);
+          }}
+          className="nav-link text-sm font-bold uppercase tracking-wider text-[#3E1F00] hover:text-[#C8944A] transition-colors"
+        >
+          {link.label}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</nav>
           {/* Right side: Search + Social + Mobile Menu */}
           <div className="flex items-center gap-3">
             {/* Search */}
-            <div className="relative" ref={searchRef}>
-              <div className="flex items-center gap-2 bg-[#F5E6CC] rounded-full px-3 py-2">
-                <Search size={16} className="text-[#8B5E3C]" />
-                <input
-                  type="text"
-                  placeholder="Search products..."
-                  value={searchQuery}
-                  onChange={e => handleSearch(e.target.value)}
-                  onFocus={() => searchResults.length > 0 && setSearchOpen(true)}
-                  className="bg-transparent text-sm text-[#3E1F00] placeholder-[#8B5E3C] outline-none w-32 md:w-48"
-                />
-              </div>
-              {searchOpen && searchResults.length > 0 && (
-                <div className="search-dropdown">
-                  {searchResults.map(p => (
-                    <button key={p.id} onClick={() => { navigate(getCategoryPath(p.category)); setSearchOpen(false); setSearchQuery(''); }}
-                      className="w-full flex items-center gap-3 px-4 py-3 hover:bg-[#F5E6CC] transition-colors text-left border-b border-[#F5E6CC] last:border-0">
-                      <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 img-placeholder flex items-center justify-center text-lg">
-                        <img src={p.image} alt={p.name} className="w-full h-full object-cover"
-                          onError={e => { e.target.style.display='none'; e.target.parentNode.innerHTML='🎂'; }} />
-                      </div>
-                      <div>
-                        <p className="text-sm font-bold text-[#3E1F00]">{p.name}</p>
-                        <p className="text-xs text-[#8B5E3C] capitalize">{p.category} · <span className="text-[#C8944A] font-bold">{p.price}</span> {p.unit}</p>
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              )}
+<div className="relative" ref={searchRef}>
+  <div className="flex items-center gap-2 bg-[#F5E6CC] rounded-full px-3 py-2">
+    <Search
+      size={16}
+      className="text-[#8B5E3C]"
+      aria-hidden="true"
+    />
+
+    <input
+      type="search"
+      placeholder="Search products..."
+      aria-label="Search products"
+      value={searchQuery}
+      onChange={(e) => handleSearch(e.target.value)}
+      onFocus={() => searchResults.length > 0 && setSearchOpen(true)}
+      className="bg-transparent text-sm text-[#3E1F00] placeholder-[#8B5E3C] outline-none w-32 md:w-48"
+    />
+  </div>
+
+  {searchOpen && searchResults.length > 0 && (
+    <ul
+      className="search-dropdown"
+      role="listbox"
+      aria-label="Search results"
+    >
+      {searchResults.map((p) => (
+        <li key={p.id}>
+          <Link
+            to={getCategoryPath(p.category)}
+            onClick={() => {
+              setSearchOpen(false);
+              setSearchQuery("");
+            }}
+            className="w-full flex items-center gap-3 px-4 py-3 hover:bg-[#F5E6CC] transition-colors text-left border-b border-[#F5E6CC] last:border-0"
+          >
+            <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 img-placeholder flex items-center justify-center text-lg">
+              <img
+                src={p.image}
+                alt={p.name}
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.target.style.display = "none";
+                  e.target.parentNode.innerHTML = "🎂";
+                }}
+              />
             </div>
+
+            <div>
+              <p className="text-sm font-bold text-[#3E1F00]">
+                {p.name}
+              </p>
+
+              <p className="text-xs text-[#8B5E3C] capitalize">
+                {p.category} ·{" "}
+                <span className="text-[#C8944A] font-bold">
+                  {p.price}
+                </span>{" "}
+                {p.unit}
+              </p>
+            </div>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  )}
+</div>
 
             {/* Social Icons */}
             <div className="hidden md:flex items-center gap-2">
