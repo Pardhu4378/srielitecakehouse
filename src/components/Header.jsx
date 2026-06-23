@@ -91,25 +91,33 @@ export default function Header() {
       : "bg-white/95 backdrop-blur-md"
   }`}
 >
-      {/* Top bar */}
-      <div className="bg-[#3E1F00] text-[#F5E6CC] text-xs py-1.5 px-4 flex items-center justify-between">
-      {/* Left */}
-      <span className="font-lato tracking-wide hidden sm:block">
-      🎂 Custom Cakes · Homemade Quality · Premium Desserts
-      </span>
+      {/* Top Bar */}
+      <section
+  className="bg-[#3E1F00] text-[#F5E6CC] text-xs py-1.5 px-4 flex items-center justify-between"
+  aria-label="Business information"
+  >
+  {/* Business Tagline */}
+  <p className="hidden sm:flex items-center gap-1 font-lato tracking-wide">
+    <span aria-hidden="true">🎂</span>
+    <span>Custom Cakes · Homemade Quality · Premium Desserts</span>
+  </p>
 
-      {/* Right */}
-      <div className="ml-auto flex items-center text-[#F5E6CC]">
-      <span className="mr-2">📍</span>
-      <span className="text-xs whitespace-nowrap">
+  {/* Business Address */}
+  <address className="ml-auto flex items-center gap-2 not-italic">
+    <span aria-hidden="true">📍</span>
+    <span className="whitespace-nowrap">
       Kruthika Nilaya Apartment, Kudlu Main Rd, Bengaluru
-      </span>
-  </div>
-</div>
+    </span>
+  </address>
+</section>
         {/* Main header */}
         <div className="px-4 md:px-8 py-3 flex items-center justify-between gap-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 shrink-0">
+          <Link
+  to="/"
+  aria-label="Sri Elite Cake House Home"
+  className="flex items-center gap-3 shrink-0"
+>
             <img src="/logo.png" alt="Sri Elite Cake House" className="h-14 w-14 object-contain" />
             <div className="hidden sm:block">
               <p className="font-playfair text-[#C8944A] text-sm tracking-widest lowercase">Welcome to</p>

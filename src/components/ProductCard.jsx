@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { openWhatsApp, buildCakeMessage, buildBentoMessage, buildDonutMessage, buildMuffinMessage, buildCupcakeMessage, buildBrownieMessage, builddreamtinMessage } from '../lib/whatsapp';
 import { ShoppingBag, Tag, AlertCircle } from 'lucide-react';
+
 
 function getMessageFn(category, product, occasion) {
   switch (category) {
@@ -15,19 +17,24 @@ function getMessageFn(category, product, occasion) {
   }
 }
 
-export default function ProductCard({ product, category, occasion, showBadge = true }) {
+  export default function ProductCard({ product, category, occasion, showBadge = true }) {
   const [imgError, setImgError] = useState(false);
+  const navigate = useNavigate();
 
-  const categoryEmojis = {
-    cakes: '🎂', bento: '🎁', donuts: '🍩', muffins: '🧁',
-    cupcakes: '🍰', brownies: '🍫', dreamtin: '✨'
-  };
+    const categoryEmojis = {
+      cakes: '🎂', bento: '🎁', donuts: '🍩', muffins: '🧁',
+      cupcakes: '🍰', brownies: '🍫', dreamtin: '✨'
+    };
 
-  const handleOrder = () => {
-    const message = getMessageFn(category, product, occasion);
-    openWhatsApp(message);
-  };
-
+ const handleOrder = () => {
+  navigate("/order", {
+    state: {
+      product,
+      category,
+      occasion,
+    },
+  });
+};
   return (
     <div className="product-card flex flex-col h-full group">
       {/* Image */}
